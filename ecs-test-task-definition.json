@@ -1,0 +1,30 @@
+[
+  {
+      "name": "test-ecs-container",
+      "image": "117249495680.dkr.ecr.us-east-1.amazonaws.com/demo:latest",
+      "cpu": 10,
+      "memory": 512,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "test_devl_cw",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      "links": [],
+      "portMappings": [
+          { 
+              "hostPort": 8080,
+              "containerPort": 8080,
+              "protocol": "tcp"
+          }
+      ],
+      "essential": true,
+      "entryPoint": [],
+      "command": [],
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": []
+  }
+]
